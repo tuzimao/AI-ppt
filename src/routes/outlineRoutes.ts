@@ -1,13 +1,15 @@
+// src/routes/outlineRoutes.ts
+
 import express from 'express';
-import { getOutlineById, createNewOutline, editOutline } from '../controllers/outlineController';
+import { createAndGenerateOutline, editOutline } from '../controllers/outlineController';
 
 const router = express.Router();
 
 // 获取大纲
-router.get('/:outlineId', getOutlineById);
+//router.get('/:outlineId', getOutlineById);
 
-// 创建大纲
-router.post('/', createNewOutline);
+// 创建并生成大纲
+router.post('/', createAndGenerateOutline);
 
 // 编辑大纲
 router.put('/:outlineId', editOutline);
